@@ -77,7 +77,7 @@ sequenceDiagram
     participant browser
     participant server
 
-    brwoser->>browser: When submitting, a new note is created, added to the notes list and the notes list is redrawn
+    browser->>browser: When submitting, a new note is created, added to the notes list and the notes list is redrawn
 
     Note right of browser: After that, the new note is sent to the server
 
