@@ -1,4 +1,4 @@
-# Atividade 0.4
+## Exercise 0.4
 
 ```mermaid
 sequenceDiagram
@@ -38,7 +38,7 @@ sequenceDiagram
     Note right of browser: The browser executes the callback function that renders the notes
 ```
 
-## Atividade 0.5
+## Exercise 0.5
 
 ```mermaid
 sequenceDiagram
@@ -68,4 +68,24 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+```
+
+## Exercise 0.6
+
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    brwoser->>browser: When submitting, a new note is created, added to the notes list and the notes list is redrawn
+
+    Note right of browser: After that, the new note is sent to the server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+
+    Note right of browser: The form data is sent to the server in the BODY of the request for the route /new_route_spa
+
+    server-->>browser: {"message":"note created"}
+    deactivate server
 ```
