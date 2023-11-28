@@ -2,10 +2,12 @@
 sequenceDiagram
     participant browser
     participant server
-    participant user
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
+
+    Note right of browser: Os dados do formulário são enviados para o servidor no BODY da requisição para a rota /new_route
+
     server-->>browser: Redirect /notes (HTTP 302)
     deactivate server
 
