@@ -16,7 +16,7 @@ const Countries = ({countries, handleShow}) => {
             <img src={countries[0].flags.png} alt='country flag'/>
             <h2>Weather in {countries[0].capital[0]}</h2>
             <p>temperature {countries[0].temperature} Celcius</p>
-            <img src={`https://openweathermap.org/img/wn/${countries[0].icon}@2x.png`}/>
+            <img src={`https://openweathermap.org/img/wn/${countries[0].icon}@2x.png`} alt='weather icon'/>
             <p>wind {countries[0].windSpeed} m/s</p>
         </div>
     )
